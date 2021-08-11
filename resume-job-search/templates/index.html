@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+          <p class="h2">
+            Searching for jobs can be tricky. We&#39;re here to help!
+          </p>
+
+          <p class="lead fw-normal">
+            Upload your resume and our search engine will return jobs that match your resume!
+          </p>
+
+          <form method="POST" action="{{ url_for('results') }}" enctype="multipart/form-data" class="input-group input-group-lg">
+            <input type="file" id="resume" name="resume-file" accept="application/pdf" class="form-control form-control-lg" />
+            <button type="submit" for="resume" class="btn btn-primary input-group-text">Find matching jobs</button>
+          </form>
+{% endblock content %}

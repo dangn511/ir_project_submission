@@ -1,0 +1,30 @@
+body {
+  height: 100vh;
+}
+
+#search-results-page {
+  display: flex;
+  flex-direction: column;
+}
+
+#search-results-header {
+  flex-shrink: 0;
+}
+
+#search-results-main {
+  margin: 0;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+#sidebar-menu-container {
+  height: 100%;
+  padding: 0;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+#active-listing-info {
+  height: 100%;
+  overflow-y: auto;
+}
