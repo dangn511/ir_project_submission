@@ -168,6 +168,9 @@ def retrieve_from_query(query):
     query = spl_chars_removal(query)
     tokenized_query = sentence_stemmer(query)
     
+    doc_scores = bm25.get_scores(tokenized_query)
+    top_15_matches = sorted(range(len(doc_scores)), key=lambda i: doc_scores[i])[-15:]
+    
     results = {}
     for count, item in enumerate(top_15_matches):
         result_id = relevant_docs[item]
